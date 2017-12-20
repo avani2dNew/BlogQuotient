@@ -1,0 +1,30 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='blog.clientlib.login'}"/>
+
+<input type="hidden" name="currentCount" id="currentCount" value="3"/>
+<form class="form-signin">
+
+    <h2 class="form-signin-heading">${properties.heading || "Please Enter Title"}</h2>
+
+
+    <h4 class="form-signin-heading">
+        <small>${properties.subHeading || "Please enter sub heading"}</small>
+    </h4>
+
+    <label for="inputEmail" class="sr-only">User Name</label>
+    <input type="TEXT" id="userId" class="form-control" placeholder="User Name" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="remember-me" id="rememberMe"> Remember me
+        </label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" id="loginButton">Sign in</button>
+
+    <div id="errordiv"></div>
+
+    <span><input type="hidden" id="url" value="${currentPage.path}/j_security_check"/></span>
+</form>

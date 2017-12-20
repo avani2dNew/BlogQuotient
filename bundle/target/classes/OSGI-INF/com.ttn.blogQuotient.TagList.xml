@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component immediate="true" name="com.ttn.blogQuotient.TagList">
+        <implementation class="com.ttn.blogQuotient.TagList"/>
+        <property name="service.pid" value="com.ttn.blogQuotient.TagList"/>
+    </scr:component>
+</components>

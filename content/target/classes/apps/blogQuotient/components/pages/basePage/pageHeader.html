@@ -1,0 +1,34 @@
+<nav class="navbar navbar-inverse  navbar-fixed-top">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/content/blogQuotient/home.html">Blog Quotient</a>
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/content/blogQuotient/home.html">Home</a></li>
+<!--/*      <sly data-sly-test=" ${currentSession.user.groupname == 'blogauthor'}">*/-->
+                <li><a href="/content/blogQuotient/createBlog.html">Create Blog</a></li>
+<!--/*      </sly>*/-->
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <sly data-sly-test=" ${currentSession.userID == null}">
+                <li>
+                    <a href="/content/blogQuotient/registration.html">Register</a>
+                </li>
+                <li>
+                    <a href="/content/blogQuotient/login.html">Login</a>
+                </li>
+            </sly>
+            <sly data-sly-test=" ${currentSession.userID != null}">
+                <li>
+                    <a>Hi User</a>
+                </li>
+                <li>
+                    <a href="/system/sling/logout">Logout</a>
+                </li>
+            </sly>
+        </ul>
+    </div>
+</nav>

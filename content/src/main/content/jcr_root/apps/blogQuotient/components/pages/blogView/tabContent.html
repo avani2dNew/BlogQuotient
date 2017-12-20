@@ -1,0 +1,76 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientLib.all @categories='blog.clientlib.blogView,cq.ckeditor,cq.social.hbs.comments,cq.social.hbs.voting'}"></sly>
+
+<input type="hidden" name="pageUrl" id="pageUrl" value="${currentPage.path}"/>
+<input type="hidden" name="currentCount" id="currentCount" value="${properties.viewCount}"/>
+<div class="row">
+    <div class="col-md-9">
+        <sly data-sly-test=" ${currentSession.userID == properties.jcr:createdBy}">
+            <div class="row">
+                <button class="btn btn-info pull-right" style="border-radius:10px;margin:5px 15px;padding:8px 10px;">
+                    <a href="${currentPage.path}.edit.html">Edit Blog</a>
+                </button>
+            </div>
+        </sly>
+
+        <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <div class="post-heading">
+                            <h1>${properties.blogTitle || "Blog Title"}</h1>
+
+                            <h2 class="subheading">${properties.blogSubTitle || ""}</h2>
+              <span class="meta">Posted by
+                <span>${properties.jcr:createdBy || "Unknown"}</span>
+                on ${properties.jcr:created.time.toLocaleString || "Unknown"}</span>
+                            <span class="meta" style="font-size:16px;">(Last modified on ${currentPage.lastModified.time.toLocaleString || "Unknown"})</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row" style="margin: -40px 0 8px 0;">
+            <div class="col-md-2" style="margin:5px 15px;padding:8px 10px;">
+                ${properties.viewCount} views
+            </div>
+            <button id="like" class="btn btn-info pull-right" data-likes="${properties.likes}"
+                    style="border-radius:10px;margin:5px 15px;padding:8px 10px;">
+                ${properties.likes} likes
+            </button>
+        </div>
+
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <p>${properties.blogDescription}</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div>
+            <div data-sly-resource="${ @path='iparComm', resourceType='foundation/components/iparsys'}"/>
+        </div>
+    </div>
+
+    <div class="col-md-3" style="position: absolute;right: -240px;top: 40px;">
+        <div class="card my-4">
+            <h5 class="card-header listHeader">Related Blogs</h5>
+
+            <div class="card-body">
+                <div data-sly-resource="${ @path='iparRel', resourceType='foundation/components/iparsys'}"/>
+            </div>
+        </div>
+        <div class="card my-4">
+            <h5 class="card-header listHeader">Blogs by Author</h5>
+
+            <div class="card-body">
+                <div data-sly-resource="${ @path='iparAuth', resourceType='foundation/components/iparsys'}"/>
+            </div>
+        </div>
+    </div>
+</div>

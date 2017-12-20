@@ -1,0 +1,12 @@
+<html>
+	<div data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"/>
+	<div data-sly-call="${clientLib.all @categories='blog.clientlib.basic'}"/>
+    <div data-sly-include="head.html"></div>
+    <body>
+	    <div class="container" style="min-height: 610px;">
+		    <div data-sly-include="pageHeader.html"></div><br><br><br><br>
+        	<div data-sly-include="bodyContent.html"></div>
+		</div>
+			<div data-sly-include="footer.html"></div>
+	</body>
+</html>

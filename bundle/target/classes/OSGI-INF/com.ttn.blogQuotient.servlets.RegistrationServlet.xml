@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="Registration Servlet">
+        <implementation class="com.ttn.blogQuotient.servlets.RegistrationServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths">
+            /bin/servlet/register
+        </property>
+        <property name="sling.servlet.methods">
+            POST
+        </property>
+        <property name="service.pid" value="Registration Servlet"/>
+        <reference name="userService" interface="com.ttn.blogQuotient.service.UserService" cardinality="1..1" policy="static" bind="bindUserService" unbind="unbindUserService"/>
+    </scr:component>
+</components>

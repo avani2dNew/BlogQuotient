@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component immediate="true" name="com.ttn.blogQuotient.impl.UserServiceImpl">
+        <implementation class="com.ttn.blogQuotient.impl.UserServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.ttn.blogQuotient.service.UserService"/>
+        </service>
+        <property name="service.pid" value="com.ttn.blogQuotient.impl.UserServiceImpl"/>
+        <reference name="resolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" cardinality="1..1" policy="static" bind="bindResolverFactory" unbind="unbindResolverFactory"/>
+    </scr:component>
+</components>

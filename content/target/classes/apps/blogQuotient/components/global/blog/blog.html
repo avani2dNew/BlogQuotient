@@ -1,0 +1,61 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientLib.all @categories='blog.clientlib.blogStyle'}"></sly>
+
+<section id="createBlog">
+    <div class="section-content">
+        <h1 class="section-header"><span class="content-header wow fadeIn " data-wow-delay="0.2s"
+                                         data-wow-duration="2s">${properties.heading || "Some Title"}</span></h1>
+
+        <h3>${properties.subHeading || "Some subtext should come here."}</h3>
+    </div>
+    <div class="createBlog-section">
+        <div class="container">
+            <form method="POST" action="/content/blogQuotient/blogList/" enctype="multipart/form-data">
+
+                <input type="hidden" name="jcr:primaryType" value="cq:Page"/>
+                <input type="hidden" name="jcr:content/jcr:primaryType" value="cq:PageContent"/>
+                <input type="hidden" name="jcr:content/sling:resourceType"
+                       value="blogQuotient/components/pages/blogView"/>
+                <input type="hidden" name="jcr:content/cq:template" value="/apps/blogQuotient/templates/blogView"/>
+                <input type="hidden" name="jcr:content/viewCount" value="0"/>
+                <input type="hidden" name="jcr:content/likes" value="0"/>
+                <input type="hidden" name=":redirect" value="/content/blogQuotient/home.html"/>
+
+                <div class="col-md-6 form-line">
+                    <div class="form-group">
+                        <label for="blogTitle">Blog Title</label>
+                        <input type="text" class="form-control inputField" name="jcr:content/blogTitle" id="blogTitle"
+                               placeholder=" Enter Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="blogTitle">Blog Subtitle</label>
+                        <input type="text" class="form-control inputField" name="jcr:content/blogSubTitle"
+                               id="blogSubTitle" placeholder=" Enter a Subtitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="blogTitle">Choose Tags</label>
+                        <select class="form-control inputField" name="jcr:content/cq:tags"
+                                id="blogTags" multiple>
+                             <option value="blogQuotient:entertainment">Entertainment</option>
+                             <option value="blogQuotient:entertainment/movies">Entertainment/Movies</option>
+                             <option value="blogQuotient:events/festival">Events</option>
+                             <option value="blogQuotient:events/festival">Events/Festival</option>
+                             <option value="blogQuotient:fashion">Fashion</option>
+                             <option value="blogQuotient:fashion/clothing">Fashion/Clothing</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="description"> Blog Description</label>
+                        <textarea class="form-control inputField" name="jcr:content/blogDescription" id="description"
+                                  placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-default submit" value="submit"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

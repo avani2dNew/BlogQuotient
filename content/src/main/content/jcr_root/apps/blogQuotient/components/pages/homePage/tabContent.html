@@ -1,0 +1,27 @@
+<div data-sly-include="author.html"></div>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @categories='blog.clientlib.blogLists'}"></sly>
+
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Blog Quotient</h1>
+              <span class="subheading">Come for what you love.<br>Stay for what you discover.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+</header>
+
+<div class="container">
+      <div class="row">
+	<div class="col-md-11">
+		<div data-sly-resource="${ @path='parBQ1', resourceType='foundation/components/parsys'}"/>
+    </div>
+	<div class="col-md-1">
+		<div data-sly-resource="${ @path='parBQ2', resourceType='foundation/components/parsys'}"/>
+    </div>
+      </div>
+</div>

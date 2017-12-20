@@ -1,0 +1,23 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @categories='blog.clientlib.blogLists'}"></sly>
+<div data-sly-use.blogService="${'com.ttn.blogQuotient.BlogList' @ listingType='POPULAR', resourcePath='/content/blogQuotient/blogList'}" data-sly-test="${blogService}">
+
+<ul data-sly-list.blog="${blogService.blogs}">
+ 	<li>
+          <div class="post-preview">
+            <a href="${blog.path}.html">
+              <h2 class="post-title">
+                ${blog.blogTitle}
+              </h2>
+              <h3 class="post-subtitle">
+                ${blog.blogSubTitle}
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <span>${blog.author || "Unknown"}</span> 
+              on <span>${blog.publishDateString || "Unknown"}</span>
+              </p>
+          </div>
+    </li>
+    <hr>
+</ul>
+</div>
