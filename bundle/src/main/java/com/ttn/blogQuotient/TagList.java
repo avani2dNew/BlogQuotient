@@ -26,12 +26,21 @@ public class TagList extends WCMUsePojo {
 
     @Override
     public void activate() {
-        String resourcePath = get("resourcePath", String.class);
+        String namespacePath = get("namespacePath", String.class);
 
         ResourceResolver resolver = getResourceResolver();
         TagManager tagManager = resolver.adaptTo(TagManager.class);
-        Tag[] tagArray = tagManager.getTagsForSubtree(resolver.getResource(resourcePath), true);
-        tags = Arrays.asList(tagArray);
+        Iterator<Tag> tagIter = tagManager.resolve(namespacePath).listChildren();
+        List<Tag> tagList = new ArrayList<Tag>();
+        while (tagIter.hasNext()) {
+            Tag tag = tagIter.next();
+            tagList.add(tag);
+            Iterator<Tag> childTagIter = tag.listAllSubTags();
+            while (childTagIter.hasNext()) {
+                tagList.add(childTagIter.next());
+            }
+        }
+        tags = tagList;
     }
 
     public List<Tag> getTags() {

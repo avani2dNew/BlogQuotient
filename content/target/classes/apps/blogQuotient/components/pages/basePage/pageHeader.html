@@ -23,7 +23,7 @@
             </sly>
             <sly data-sly-test=" ${currentSession.userID != null}">
                 <li>
-                    <a>Hi User</a>
+					<a>Hi ${currentSession.userID}</a>
                 </li>
                 <li>
                     <a href="/system/sling/logout">Logout</a>

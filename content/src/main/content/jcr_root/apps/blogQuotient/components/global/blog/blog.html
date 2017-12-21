@@ -1,3 +1,4 @@
+<div data-sly-use.tagList="${'com.ttn.blogQuotient.TagList' @ namespacePath='/etc/tags/blogQuotient'}" data-sly-test="${tagList}">
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
      data-sly-call="${clientLib.all @categories='blog.clientlib.blogStyle'}"></sly>
 
@@ -36,12 +37,9 @@
                         <label for="blogTitle">Choose Tags</label>
                         <select class="form-control inputField" name="jcr:content/cq:tags"
                                 id="blogTags" multiple>
-                             <option value="blogQuotient:entertainment">Entertainment</option>
-                             <option value="blogQuotient:entertainment/movies">Entertainment/Movies</option>
-                             <option value="blogQuotient:events/festival">Events</option>
-                             <option value="blogQuotient:events/festival">Events/Festival</option>
-                             <option value="blogQuotient:fashion">Fashion</option>
-                             <option value="blogQuotient:fashion/clothing">Fashion/Clothing</option>
+                            <sly data-sly-list.tag="${tagList.tags}">
+                                <option value="${tag.tagID}">${tag.title}</option>
+                            </sly>
                         </select>
                     </div>
                 </div>

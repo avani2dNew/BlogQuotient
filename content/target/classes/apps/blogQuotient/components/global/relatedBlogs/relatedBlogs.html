@@ -1,5 +1,5 @@
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @categories='blog.clientlib.blogLists'}"></sly>
-<div data-sly-use.blogService="${'com.ttn.blogQuotient.BlogList' @ listingType='RELATED', resourcePath='/content/blogQuotient/blogList'}" data-sly-test="${blogService}">
+<div data-sly-use.blogService="${'com.ttn.blogQuotient.BlogList' @ listingType='RELATED', resourcePath=currentPage.path}" data-sly-test="${blogService}">
 
 <ul data-sly-list.blog="${blogService.blogs}">
  	<li>
@@ -20,4 +20,7 @@
     </li>
     <hr>
 </ul>
+<sly data-sly-test="${!blogService.blogs}">
+   <div class="text-center">No data to show</div>
+</sly>
 </div>

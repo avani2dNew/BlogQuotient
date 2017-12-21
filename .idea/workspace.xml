@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BlogList.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BlogList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/BlogList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.8161435">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -36,8 +36,6 @@
                 <element signature="e#1817#1823#0" expanded="true" />
                 <element signature="e#3268#3274#0" expanded="true" />
                 <element signature="e#4229#4235#0" expanded="true" />
-                <element signature="e#5983#5984#0" expanded="true" />
-                <element signature="e#6011#6012#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,15 +51,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TagList.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TagList.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/TagList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-              <folding>
-                <element signature="e#1220#1221#0" expanded="true" />
-                <element signature="e#1247#1248#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.32374102">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,8 +119,9 @@
         <option value="$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/servlets/RegistrationServlet.java" />
         <option value="$PROJECT_DIR$/content/src/main/content/jcr_root/etc/designs/blogQuotient/blogClientLib/js.txt" />
-        <option value="$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/TagList.java" />
         <option value="$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/BlogList.java" />
+        <option value="$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/SearchResult.java" />
+        <option value="$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/TagList.java" />
       </list>
     </option>
   </component>
@@ -183,8 +179,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -691,12 +685,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="project.scopes" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/workspaces/myCloud/uptime" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -901,12 +897,13 @@
       <workItem from="1513336581115" duration="148000" />
       <workItem from="1513336743417" duration="15189000" />
       <workItem from="1513519650515" duration="28181000" />
-      <workItem from="1513749998224" duration="15961000" />
+      <workItem from="1513749998224" duration="16553000" />
+      <workItem from="1513832930976" duration="1782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65345000" />
+    <option name="totallyTimeSpent" value="67719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="24" width="1297" height="744" extended-state="6" />
@@ -1029,18 +1026,6 @@
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/TagList.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/TagList.java</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/BlogList.java</url>
           <line>54</line>
           <properties />
@@ -1086,7 +1071,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="97" />
+      <option name="time" value="101" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1095,14 +1080,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/impl/filters/LoggingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bundle/blogQuotient-bundle.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1157,7 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1260,18 +1236,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17676768">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content/src/main/content/jcr_root/etc/designs/blogQuotient/blogClientLib/css/bootstrap.min.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content/src/main/content/jcr_root/etc/designs/blogQuotient/blogClientLib/css/bootstrap-theme.min.css">
@@ -1328,7 +1303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1441,7 +1415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1449,7 +1422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06726457">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1457,12 +1429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1513761164000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1513761164000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1513761164000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1513761164000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1470,7 +1436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.033632286">
           <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1478,18 +1443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.033632286">
           <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/TagList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding>
-            <element signature="e#1220#1221#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1511,7 +1464,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/BlogList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8161435">
+        <state vertical-scroll-proportion="0.0">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1519,9 +1472,15 @@
             <element signature="e#1817#1823#0" expanded="true" />
             <element signature="e#3268#3274#0" expanded="true" />
             <element signature="e#4229#4235#0" expanded="true" />
-            <element signature="e#5983#5984#0" expanded="true" />
-            <element signature="e#6011#6012#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bundle/src/main/java/com/ttn/blogQuotient/TagList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32374102">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
